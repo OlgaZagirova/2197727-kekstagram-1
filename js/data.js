@@ -1,4 +1,4 @@
-import {getRandomPositiveInteger} from './util.js';
+import {getRandomPositiveInteger, checkStringLength} from './utils.js';
 
 const NAMES = [
   'Аркадий Шапулов',
@@ -36,9 +36,6 @@ const AvatarNumber = {
   MIN: 1,
   MAX: 6
 };
-
-const checkStringLength = (string, length) => string.length <= length;
-checkStringLength('Кекс', 6);
 
 const createComment = (id) => ({
   id,
