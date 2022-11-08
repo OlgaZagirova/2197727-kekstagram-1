@@ -6,6 +6,5 @@ const getRandomPositiveInteger = (a, b) => {
 };
 
 const checkStringLength = (string, length) => string.length <= length;
-checkStringLength('Кекс', 6);
 
 export {getRandomPositiveInteger, checkStringLength};
