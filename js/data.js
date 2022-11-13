@@ -1,4 +1,4 @@
-import {getRandomPositiveInteger, checkStringLength} from './utils.js';
+import { getRandomPositiveInteger } from './utils.js';
 
 const NAMES = [
   'Аркадий Шапулов',
@@ -59,11 +59,11 @@ const createPhoto = (id) => ({
   comments: createCommentsArray()
 });
 
-const createPhotoArray = () => {
+const createPhotos = () => {
   const photo = Array.from({
     length: 25
   });
   return photo.map((element, index) => createPhoto(index + 1));
 };
 
-export {createPhotoArray};
+export { createPhotos };

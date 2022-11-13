@@ -1,5 +1,6 @@
-import {createPhotoArray} from './data.js';
-import {createThumbnails} from './thumbnails.js';
+import { createPhotos } from './data.js';
+import { createThumbnails } from './thumbnails.js';
 
-const data = createPhotoArray();
+const data = createPhotos();
+
 createThumbnails(data);
