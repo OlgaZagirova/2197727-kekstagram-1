@@ -85,7 +85,6 @@ const openBigPicture = (photo) => {
   bigPictureCaption.textContent = photo.description;
   bigPictureLike.textContent = photo.likes;
   initComments(photo);
-
   bigPictureCloseBtn.addEventListener('click', onBigPictureCloseBtnClick);
   window.addEventListener('keydown', onWindowEscKeydown);
 };
