@@ -16,7 +16,7 @@ const successMessageTemplate = `<section class="success js-message">
 
 const onDocumentEscKeydown = (evt) => {
   if (isEscapeKey(evt)) {
-    document.removeEventListener('keydown', onDocumentEscKeydown);
+    // document.removeEventListener('keydown', onDocumentEscKeydown);
     removeMessage();
   }
 };
@@ -28,7 +28,7 @@ const onDocumentClick = (evt) => {
     removeMessage();
   }
 
-  document.removeEventListener('click', onDocumentClick);
+  // document.removeEventListener('click', onDocumentClick);
   removeMessage();
 };
 
@@ -41,6 +41,8 @@ const renderMessage = (isSuccess = false) => {
 function removeMessage() {
   const message = document.querySelector('.js-message');
   message.remove();
+  document.removeEventListener('click', onDocumentClick);
+  document.removeEventListener('keydown', onDocumentEscKeydown);
 }
 
 export { renderMessage };

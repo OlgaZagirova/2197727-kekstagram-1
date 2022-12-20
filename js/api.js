@@ -7,13 +7,13 @@ const getData = (onSuccess, onFail) => {
   fetch (Url.GET)
     .then((response) => {
       if (response.ok) {
-        return response.json;
+        return response.json();
       } else {
         onFail();
       }
     })
-    .then((data) => {
-      onSuccess(data);
+    .then((photos) => {
+      onSuccess(photos);
     })
     .catch(() => {
       onFail();

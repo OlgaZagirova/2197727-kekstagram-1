@@ -1,10 +1,10 @@
-import { TIMEOUT_DELAY } from './consts.js';
+import { TIMEOUT_DELAY, ALERT_SHOW_TIME } from './consts.js';
 
 export const checkStringLength = (string, length) => string.length <= length;
 
 export const isEscapeKey = (evt) => evt.key === 'Escape';
 
-export const showAlert = (alertShowTime) => {
+export const showAlert = () => {
   const alertContainer = document.createElement('div');
   alertContainer.style.zIndex = '100';
   alertContainer.style.position = 'absolute';
@@ -17,7 +17,7 @@ export const showAlert = (alertShowTime) => {
   alertContainer.style.backgroundColor = '#dc143c';
   alertContainer.textContent = 'Не удалось загрузить фотографии';
   document.body.append(alertContainer);
-  setTimeout(() => alertContainer.remove(), alertShowTime);
+  setTimeout(() => alertContainer.remove(), ALERT_SHOW_TIME);
 };
 
 export const shuffleArray = (arr) => arr.map((a) => [Math.random(), a]).sort((a, b) => a[0] - b[0]).map((a) => a[1]);
